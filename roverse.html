@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+<!--
+	Visualize by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html>
+	<head>
+		<title>Roverse</title>
+		
+		<!-- Favicons -->
+		<link href="img/techlogo.png" rel="icon">
+
+		<meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+
+		<link rel="stylesheet" href="css/modal.css">
+		<link rel="stylesheet" href="css/events.css" />
+	</head>
+	<body>
+
+		<!-- Wrapper -->
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<span class="avatar" style="cursor: pointer;"><img src="img/gallery/roverse.jpg" alt="" width="200px" height="160px" /></span>
+				<h1><b>Roverse</b></h1>
+				<h2><b>You just can't differentiate between a robot and the very best of humans</b></h2>
+			</header>
+
+			<!-- Main -->
+			<section id="main">
+
+				<!-- Thumbnails -->
+				<section class="thumbnails">
+					<div>
+						<a id="event1" class="ROPICKER" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_picker.jpg" class="lazyload" alt="" />
+							<h3>Ro-Picker</h3>
+						</a>
+						<a id="event2" class="ROCARROM" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_car.jpg" class="lazyload" alt="" />
+							<h3>Ro-Carrom</h3>
+						</a>
+					</div>
+					<div>
+						<a id="event3" class="RONAVIGATOR" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_nav.jpg" class="lazyload" alt="" />
+							<h3>Ro-Navigator</h3>
+						</a>
+						<a id="event4" class="ROTERRANCE" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_t.jpg" class="lazyload" alt="" />
+							<h3>Ro-Terrance</h3>
+						</a>
+						<a id="event5" class="ROSOCCER" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_socc.jpg" class="lazyload" alt="" />
+							<h3>Ro-Soccer</h3>
+						</a>
+					</div>
+					<div>
+						<a id="event6" class="ROCOMBAT" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_com.jpg" class="lazyload" alt="" />
+							<h3>Ro-Combat</h3>
+						</a>
+						<a id="event7" class="ROWINGS" style="border-radius: 10%;" onclick="register(this.classList[0])">
+							<img data-src="img/gallery/ro_wings.jpg" class="lazyload" alt="" />
+							<h3>Ro-Wings</h3>
+						</a>
+					</div>
+				</section>
+
+			</section>
+		</div>
+
+		<div id="modal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="modal_name">
+						<h2 style="float: left;"></h2>
+					</div>
+					<div class="close_btn">
+						<span class="close-button" style="float: right;font-size: 35px;">&times;</span>
+					</div>
+					<div class="w3-bar">
+						<button class="w3-bar-item w3-button w3-red tablink" onclick="openLink(event, 'Zoom1')">Description</button>
+						<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom2')">Rules</button>
+						<button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom3')">Result</button>
+						<button class="w3-bar-item w3-button register tablink" onclick="window.open('register.html','_blank')">Register!</button>
+	
+					</div>
+					<script>
+						function openLink(evt, animName) {
+							var i, x, tablinks;
+							x = document.getElementsByClassName("des");
+							for (i = 0; i < x.length; i++) {
+							x[i].style.display = "none";    
+							}
+							tablinks = document.getElementsByClassName("tablink");
+							for (i = 0; i < x.length; i++) {
+							tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+							}
+							document.getElementById(animName).style.display = "block";
+							evt.currentTarget.className += " w3-red";
+						}
+						</script>
+				</div>
+				<div class="modal-body">
+					<div id="Zoom1" class="w3-container des w3-animate-zoom description" style="display:block">
+						<p>hello</p>
+					</div>
+					<div id="Zoom2" class="w3-container des w3-animate-zoom rules" style="display:none">
+						<p>hello</p>
+					</div>
+					<div id="Zoom3" class="w3-container des w3-animate-zoom result" style="display:none">
+						<p>hello</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			localStorage.setItem("event", "Roverse")
+		</script>
+		<script src="js/events.js"></script>
+
+	</body>
+</html>

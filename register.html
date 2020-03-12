@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>Registration</title>
+
+    
+    <!-- Favicons -->
+    <link href="img/techlogo.png" rel="icon">
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    
+
+    <!-- Main CSS-->
+    <link href="css/register.css" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal_name">
+                    <h2 style="float: left;"></h2>
+                </div>
+                <div class="close_btn" style="cursor: pointer;">
+                    <span class="close-button" style="float: right;">&times;</span>
+                </div>   
+            </div>
+            <div class="modal-body">
+                <div class="qr" style="pointer-events: none;"></div>
+                <p style="text-align: justify;font-size: medium;">Please take a screenshot of the QR code. You have to submit the registration fees at Alumni Room, BPPIMT on any working day (for BPPIMT students) or on the day of the event (for students from other colleges). Your payment will be recieved only if you have the QR code. The QR code will be verified during payment and before the start of your event.</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-wrapper bg-gra-03 p-t-45 p-b-50">
+        <div class="wrapper wrapper--w790">
+            <div class="card card-5">
+                <div class="card-heading">
+                    <h2 class="title"></h2>
+                </div>
+                <div class="card-body">
+                    <p></p>
+                    <form method="POST">
+                        <div class="add-extra-team-name"></div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Name</div>
+                            <div class="value">
+                                <!-- <div class="row row-space"> -->
+                                    <!-- <div class="col-2"> -->
+                                        <div class="input-group">
+                                            <input class="input--style-5 check" type="text" name="name" id="Lname">
+                                            <label class="error Lname label--desc">Invalid Name</label>
+                                            <!-- <label class="label--desc">first name</label> -->
+                                        </div>
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">College</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5 check" type="text" name="college" id="college">
+                                    <label class="error college label--desc">Invalid college name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Department</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5 check" type="text" name="dept" id="dept">
+                                    <label class="error dept label--desc">Invalid department name</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Email</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-5" type="email" name="email" id="email">
+                                    <label class="error email label--desc">Invalid email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row m-b-55">
+                            <div class="name">Phone Number</div>
+                            <div class="value">
+                                    <!-- <div class="col-9"> -->
+                                        <div class="input-group">
+                                            <input class="input--style-5" type="number" name="phone" id="phone">
+                                            <label class="error phone label--desc">Invalid phone number</label>
+                                            <!-- <label class="label--desc">Phone Number</label> -->
+                                        </div>
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="add-extra"></div>
+                        <div class="form-row m-b-55 add-remove none">
+                            <button id="add-btn" class="btn btn--radius-2 btn--blue" type="button">&plus;</button>
+                            <button id="remove-btn" class="btn btn--radius-2 btn--blue" onClick="remove()" type="button">&minus;</button>
+                        </div>
+                        
+                        <div class="center">
+                            <button id="btn" class="btn register btn--radius-2 btn--red" type="submit">Register</button>
+                            <div class="loader-1 center"><span></span></div>
+                        </div>
+                        
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="lib/jquery.min.js"></script>
+    <!-- Vendor JS-->
+
+    <!-- Main JS-->
+    <script src="lib/qrcode/qrcode.js"></script>
+    <script src="js/register.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.2/firebase-analytics.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyA8Jac7-4_Yfe9cILef2sddrEUzixqKu4s",
+            authDomain: "techstormapp.firebaseapp.com",
+            databaseURL: "https://techstormapp.firebaseio.com/",
+            projectId: "techstormapp",
+            storageBucket: "techstormapp.appspot.com",
+            messagingSenderId: "778676671732",
+            appId: "1:778676671732:web:8538c989ed28cdb7a5baa1",
+            measurementId: "G-862MHPB6BB"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+    <script src="js/registerSubmit.js"></script>
+
+    <div id="snackbar"></div>
+
+    <style>
+        #snackbar {
+          visibility: hidden;
+          min-width: 250px;
+          margin-left: -125px;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          border-radius: 2px;
+          padding: 16px;
+          position: fixed;
+          z-index: 1;
+          left: 50%;
+          bottom: 30px;
+          font-size: 17px;
+        }
+        
+        #snackbar.show {
+          visibility: visible;
+          -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+          animation: fadein 0.5s, fadeout 0.5s 2.5s;
+        }
+        
+        @-webkit-keyframes fadein {
+          from {bottom: 0; opacity: 0;} 
+          to {bottom: 30px; opacity: 1;}
+        }
+        
+        @keyframes fadein {
+          from {bottom: 0; opacity: 0;}
+          to {bottom: 30px; opacity: 1;}
+        }
+        
+        @-webkit-keyframes fadeout {
+          from {bottom: 30px; opacity: 1;} 
+          to {bottom: 0; opacity: 0;}
+        }
+        
+        @keyframes fadeout {
+          from {bottom: 30px; opacity: 1;}
+          to {bottom: 0; opacity: 0;}
+        }
+        </style>
+
+    <script>
+        
+    </script>
+
+</body>
+</html>

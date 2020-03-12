@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/modal.css">
+</head>
+<body>
+    <button id="btn">Click to open Modal</button>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal_name">
+                    <h2 style="float: left;">Modal Example</h2>
+                </div>
+                <div class="close_btn">
+                    <span class="close-button" style="float: right;">&times;</span>
+                </div>
+                <div class="w3-bar w3-black">
+                    <button class="w3-bar-item w3-button w3-red tablink" onclick="openLink(event, 'Zoom1')">DESCRIPTION</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom2')">RULES</button>
+                    <button class="w3-bar-item w3-button tablink" onclick="openLink(event, 'Zoom3')">RESULT</button>
+                    <button class="w3-bar-item w3-button register tablink" onclick="window.location.href='register.html'">REGISTER!</button>
+
+                </div>
+                <script>
+                    function openLink(evt, animName) {
+                      var i, x, tablinks;
+                      x = document.getElementsByClassName("des");
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";    
+                      }
+                      tablinks = document.getElementsByClassName("tablink");
+                      for (i = 0; i < x.length; i++) {
+                        tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+                      }
+                      document.getElementById(animName).style.display = "block";
+                      evt.currentTarget.className += " w3-red";
+                    }
+                    </script>
+            </div>
+            <div class="modal-body">
+                <div id="Zoom1" class="w3-container des w3-animate-zoom" style="display:block">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur cum sequi dolores illum sint corporis praesentium unde quas cumque enim itaque, excepturi optio esse possimus eius, ullam maiores a. Maiores at id natus ad numquam minima nihil, corrupti similique nemo quidem. Odit reiciendis fuga neque accusamus adipisci quia deserunt sapiente impedit, sit corporis suscipit, autem molestias ab doloremque explicabo dicta quae. Earum ipsam consequuntur officia blanditiis perferendis commodi quasi rem maiores sunt nemo harum praesentium eum, adipisci architecto, officiis ut, facilis iusto illum neque repudiandae itaque veritatis animi est totam! Est sed quibusdam totam repudiandae facilis velit perspiciatis unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ratione, unde dolor magni eum aperiam commodi mollitia quaerat quisquam labore molestiae laudantium cumque, cupiditate, vitae delectus. Ex, rerum ipsa eius accusamus quibusdam blanditiis error aperiam saepe beatae dolor vel optio, iste, eligendi voluptatum explicabo porro soluta odit. Recusandae tempora, saepe repellendus ullam modi numquam at velit. Officia, laboriosam odio et eum voluptates blanditiis praesentium quaerat quidem, itaque suscipit cupiditate dolorum dolores quo quos facilis, exercitationem nemo cum obcaecati alias. Ut, amet velit quis, officiis fugiat impedit voluptatum laudantium iste quas ea dolorem? Recusandae tenetur corrupti quisquam odit inventore adipisci voluptate!</p>
+                </div>
+                <div id="Zoom2" class="w3-container des w3-animate-zoom" style="display:none">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur cum sequi dolores illum sint corporis praesentium unde quas cumque enim itaque, excepturi optio esse possimus eius, ullam maiores a. Maiores at id natus ad numquam minima nihil, corrupti similique nemo quidem. Odit reiciendis fuga neque accusamus adipisci quia deserunt sapiente impedit, sit corporis suscipit, autem molestias ab doloremque explicabo dicta quae. Earum ipsam consequuntur officia blanditiis perferendis commodi quasi rem maiores sunt nemo harum praesentium eum, adipisci architecto, officiis ut, facilis iusto illum neque repudiandae itaque veritatis animi est totam! Est sed quibusdam totam repudiandae facilis velit perspiciatis unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ratione, unde dolor magni eum aperiam commodi mollitia quaerat quisquam labore molestiae laudantium cumque, cupiditate, vitae delectus. Ex, rerum ipsa eius accusamus quibusdam blanditiis error aperiam saepe beatae dolor vel optio, iste, eligendi voluptatum explicabo porro soluta odit. Recusandae tempora, saepe repellendus ullam modi numquam at velit. Officia, laboriosam odio et eum voluptates blanditiis praesentium quaerat quidem, itaque suscipit cupiditate dolorum dolores quo quos facilis, exercitationem nemo cum obcaecati alias. Ut, amet velit quis, officiis fugiat impedit voluptatum laudantium iste quas ea dolorem? Recusandae tenetur corrupti quisquam odit inventore adipisci voluptate!</p>
+                </div>
+                <div id="Zoom3" class="w3-container des w3-animate-zoom" style="display:none">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo aspernatur cum sequi dolores illum sint corporis praesentium unde quas cumque enim itaque, excepturi optio esse possimus eius, ullam maiores a. Maiores at id natus ad numquam minima nihil, corrupti similique nemo quidem. Odit reiciendis fuga neque accusamus adipisci quia deserunt sapiente impedit, sit corporis suscipit, autem molestias ab doloremque explicabo dicta quae. Earum ipsam consequuntur officia blanditiis perferendis commodi quasi rem maiores sunt nemo harum praesentium eum, adipisci architecto, officiis ut, facilis iusto illum neque repudiandae itaque veritatis animi est totam! Est sed quibusdam totam repudiandae facilis velit perspiciatis unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet ratione, unde dolor magni eum aperiam commodi mollitia quaerat quisquam labore molestiae laudantium cumque, cupiditate, vitae delectus. Ex, rerum ipsa eius accusamus quibusdam blanditiis error aperiam saepe beatae dolor vel optio, iste, eligendi voluptatum explicabo porro soluta odit. Recusandae tempora, saepe repellendus ullam modi numquam at velit. Officia, laboriosam odio et eum voluptates blanditiis praesentium quaerat quidem, itaque suscipit cupiditate dolorum dolores quo quos facilis, exercitationem nemo cum obcaecati alias. Ut, amet velit quis, officiis fugiat impedit voluptatum laudantium iste quas ea dolorem? Recusandae tenetur corrupti quisquam odit inventore adipisci voluptate!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/modal.js"></script>
+</body>
+</html>
